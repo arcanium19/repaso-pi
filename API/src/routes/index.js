@@ -3,6 +3,7 @@ const {Router} = require('express');
 
 //me traigo a userRouter
 const {usersRouter} = require('./usersRouter')
+const {postsRouter} = require('./postsRoutes')
 
 //instanciamos router
 const mainRouter = Router();
@@ -10,7 +11,7 @@ const mainRouter = Router();
 
 //enrutador modularizando
 mainRouter.use('/users', usersRouter);
-//mainRouter.use('/users', );
+mainRouter.use('/posts', postsRouter);
 
 // //metodos HTTP
 // app.get('/', (req, res)=>{
