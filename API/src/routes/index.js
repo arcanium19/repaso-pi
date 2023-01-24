@@ -2,8 +2,8 @@
 const {Router} = require('express');
 
 //me traigo a userRouter
-const {usersRouter} = require('./usersRouter')
-const {postsRouter} = require('./postsRoutes')
+const usersRouter = require('./usersRouter')
+const postsRouter = require('./postsRoutes')
 
 //instanciamos router
 const mainRouter = Router();
@@ -13,7 +13,14 @@ const mainRouter = Router();
 mainRouter.use('/users', usersRouter);
 mainRouter.use('/posts', postsRouter);
 
-// //metodos HTTP
+
+
+module.exports = mainRouter;
+
+
+
+
+// metodos HTTP que fueron movidos a los modulos
 // app.get('/', (req, res)=>{
 //     res.status(200).send('All done!');
 
@@ -38,6 +45,3 @@ mainRouter.use('/posts', postsRouter);
 //     res.status(200).send('post by id');
 
 // })
-
-
-module.exports = mainRouter;

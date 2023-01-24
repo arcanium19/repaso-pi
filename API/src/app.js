@@ -2,6 +2,7 @@
 //llamamos express
 const express = require('express');
 const { json } = require('sequelize');
+const morgan = require('morgan')
 //creamos la constante de express
 const app = express();
 const mainRouter = require('./routes/index');
