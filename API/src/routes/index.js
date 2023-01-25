@@ -2,8 +2,8 @@
 const {Router} = require('express');
 
 //me traigo a userRouter
-const usersRouter = require('./usersRouter')
-const postsRouter = require('./postsRoutes')
+const usersRouter = require('./usersRouter.js')
+const postsRouter = require('./postsRoutes.js')
 
 //instanciamos router
 const mainRouter = Router();
