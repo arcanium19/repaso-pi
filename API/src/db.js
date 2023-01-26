@@ -28,4 +28,4 @@ Post.belongsTo(User);
 //Activities.belongsToMany(Countries, { through: 'Country_Activities});
 
 
-module.exports = sequelize;
+module.exports = {sequelize, ...sequelize.models};
